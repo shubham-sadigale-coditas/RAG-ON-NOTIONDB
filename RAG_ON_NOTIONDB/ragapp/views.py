@@ -25,8 +25,8 @@ client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
 
-notion_api_key = "secret_wcsmYegwG8cnTOrtw0pBciFC3sfRmQlCkjoG0O1A1jB"
-notion_database_id = "1a55702169514811812f9260473f1ea5"
+notion_api_key = os.environ.get("notion_api_key")
+notion_database_id = os.environ.get("notion_database_id")
 
 document_string = load_document(notion_api_key, notion_database_id)
 text = split_document(document_string) 
